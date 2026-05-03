@@ -23,6 +23,9 @@
             .status-active { background-color: #238636; color: white; border-color: #238636; }
             .status-danger { background-color: #da3633; color: white; border-color: #da3633; }
             .status-info { background-color: #007bff; color: white; border-color: #007bff; }
+            .repo-link { text-align: center; margin-top: 20px; margin-bottom: 30px; font-size: 1.1em; }
+            .repo-link a { color: #58a6ff; text-decoration: none; font-weight: bold; }
+            .repo-link a:hover { text-decoration: underline; }
         </style>
     </head>
     <body>
@@ -110,6 +113,10 @@
                 <img src="./INTC_GOOGL_profit.png" alt="INTC/GOOGL Profit" class="plot-image">
             </div>
         
+            <div class="repo-link">
+                <p>View the code on GitHub: <a href="https://github.com/GadiSap/AI_Sector_Statistical_Arbitrage_Live" target="_blank">AI Sector Statistical Arbitrage Live</a></p>
+            </div>
+    
             <div class="explanation">
                 <h3>Strategy Overview: Dynamic Pairs Trading in the AI Sector</h3>
                 <p>This system implements a dynamic pairs trading strategy focused on the Artificial Intelligence sector. The model identifies pairs of stocks that exhibit long-term equilibrium (cointegration) and exploits short-term price divergences through a mean-reverting framework.</p>
