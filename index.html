@@ -22,7 +22,6 @@
             .explanation li { margin-bottom: 8px; }
             .status-active { background-color: #238636; color: white; border-color: #238636; }
             .status-danger { background-color: #da3633; color: white; border-color: #da3633; }
-            .status-info { background-color: #007bff; color: white; border-color: #007bff; }
             .repo-link { text-align: center; margin-top: 20px; margin-bottom: 30px; font-size: 1.1em; }
             .repo-link a { color: #58a6ff; text-decoration: none; font-weight: bold; }
             .repo-link a:hover { text-decoration: underline; }
@@ -34,18 +33,29 @@
 
             <div class="button-container">
                 <button class="plot-button status-info" onclick="showPlot('total_portfolio')">Total Portfolio Profit</button>
-    <button class="plot-button status-active" onclick="showPlot('TEM_LTRN')">TEM/LTRN</button>
-<button class="plot-button status-active" onclick="showPlot('RXRX_BFRG')">RXRX/BFRG</button>
-<button class="plot-button status-active" onclick="showPlot('BBAI_LTRN')">BBAI/LTRN</button>
-<button class="plot-button status-active" onclick="showPlot('SOUN_BFRG')">SOUN/BFRG</button>
-<button class="plot-button status-active" onclick="showPlot('BBAI_SERV')">BBAI/SERV</button>
-<button class="plot-button status-active" onclick="showPlot('NVMI_APP')">NVMI/APP</button>
-<button class="plot-button status-active" onclick="showPlot('GOOGL_PDYN')">GOOGL/PDYN</button>
-<button class="plot-button status-danger" onclick="showPlot('LTRN_MSTR')">LTRN/MSTR</button>
-<button class="plot-button status-danger" onclick="showPlot('INTC_GOOGL')">INTC/GOOGL</button>
-<button class="plot-button status-active" onclick="showPlot('MDB_PDYN')">MDB/PDYN</button>
-<button class="plot-button status-active" onclick="showPlot('KLAC_APP')">KLAC/APP</button>
-<button class="plot-button status-danger" onclick="showPlot('LTRN_CDNS')">LTRN/CDNS</button>
+    <button class="plot-button status-active" onclick="showPlot('MPWR_ANET')">MPWR/ANET</button>
+<button class="plot-button status-active" onclick="showPlot('AKAM_AUR')">AKAM/AUR</button>
+<button class="plot-button status-danger" onclick="showPlot('WDAY_HUBS')">(Inactive) WDAY/HUBS</button>
+<button class="plot-button status-active" onclick="showPlot('WDAY_DOCU')">WDAY/DOCU</button>
+<button class="plot-button" onclick="showPlot('AKAM_TEAM')">(Inactive) AKAM/TEAM</button>
+<button class="plot-button status-active" onclick="showPlot('S_GTLB')">(Inactive) S/GTLB</button>
+<button class="plot-button" onclick="showPlot('AKAM_ZS')">(Inactive) AKAM/ZS</button>
+<button class="plot-button" onclick="showPlot('AKAM_WDAY')">(Inactive) AKAM/WDAY</button>
+<button class="plot-button" onclick="showPlot('AKAM_BBAI')">(Inactive) AKAM/BBAI</button>
+<button class="plot-button status-active" onclick="showPlot('TEM_SOUN')">(Inactive) TEM/SOUN</button>
+<button class="plot-button status-danger" onclick="showPlot('DELL_SYM')">(Inactive) DELL/SYM</button>
+<button class="plot-button status-active" onclick="showPlot('MRVL_BBAI')">(Inactive) MRVL/BBAI</button>
+<button class="plot-button" onclick="showPlot('AKAM_AI')">(Inactive) AKAM/AI</button>
+<button class="plot-button status-danger" onclick="showPlot('AVGO_TEAM')">AVGO/TEAM</button>
+<button class="plot-button status-active" onclick="showPlot('RXRX_AISP')">RXRX/AISP</button>
+<button class="plot-button status-danger" onclick="showPlot('KLAC_STX')">KLAC/STX</button>
+<button class="plot-button status-danger" onclick="showPlot('AVGO_QCOM')">AVGO/QCOM</button>
+<button class="plot-button status-active" onclick="showPlot('WRD_CRNC')">WRD/CRNC</button>
+<button class="plot-button status-danger" onclick="showPlot('WRD_BBAI')">WRD/BBAI</button>
+<button class="plot-button" onclick="showPlot('S_NOW')">S/NOW</button>
+<button class="plot-button status-active" onclick="showPlot('S_MBLY')">S/MBLY</button>
+<button class="plot-button" onclick="showPlot('S_MSTR')">S/MSTR</button>
+<button class="plot-button status-danger" onclick="showPlot('WRD_LTRN')">WRD/LTRN</button>
 
             </div>
 
@@ -53,64 +63,119 @@
                 <img src="./total_portfolio_return.png" alt="Total Portfolio Return" class="plot-image">
             </div>
     
-            <div id="TEM_LTRN" class="plot-container">
-                <img src="./TEM_LTRN_zscore.png" alt="TEM/LTRN Z-score" class="plot-image">
-                <img src="./TEM_LTRN_profit.png" alt="TEM/LTRN Profit" class="plot-image">
+            <div id="MPWR_ANET" class="plot-container">
+                <img src="./MPWR_ANET_zscore.png" alt="MPWR/ANET Z-score" class="plot-image">
+                <img src="./MPWR_ANET_profit.png" alt="MPWR/ANET Profit" class="plot-image">
             </div>
         
-            <div id="RXRX_BFRG" class="plot-container">
-                <img src="./RXRX_BFRG_zscore.png" alt="RXRX/BFRG Z-score" class="plot-image">
-                <img src="./RXRX_BFRG_profit.png" alt="RXRX/BFRG Profit" class="plot-image">
+            <div id="AKAM_AUR" class="plot-container">
+                <img src="./AKAM_AUR_zscore.png" alt="AKAM/AUR Z-score" class="plot-image">
+                <img src="./AKAM_AUR_profit.png" alt="AKAM/AUR Profit" class="plot-image">
             </div>
         
-            <div id="BBAI_LTRN" class="plot-container">
-                <img src="./BBAI_LTRN_zscore.png" alt="BBAI/LTRN Z-score" class="plot-image">
-                <img src="./BBAI_LTRN_profit.png" alt="BBAI/LTRN Profit" class="plot-image">
+            <div id="WDAY_HUBS" class="plot-container">
+                <img src="./WDAY_HUBS_zscore.png" alt="WDAY/HUBS Z-score" class="plot-image">
+                <img src="./WDAY_HUBS_profit.png" alt="WDAY/HUBS Profit" class="plot-image">
             </div>
         
-            <div id="SOUN_BFRG" class="plot-container">
-                <img src="./SOUN_BFRG_zscore.png" alt="SOUN/BFRG Z-score" class="plot-image">
-                <img src="./SOUN_BFRG_profit.png" alt="SOUN/BFRG Profit" class="plot-image">
+            <div id="WDAY_DOCU" class="plot-container">
+                <img src="./WDAY_DOCU_zscore.png" alt="WDAY/DOCU Z-score" class="plot-image">
+                <img src="./WDAY_DOCU_profit.png" alt="WDAY/DOCU Profit" class="plot-image">
             </div>
         
-            <div id="BBAI_SERV" class="plot-container">
-                <img src="./BBAI_SERV_zscore.png" alt="BBAI/SERV Z-score" class="plot-image">
-                <img src="./BBAI_SERV_profit.png" alt="BBAI/SERV Profit" class="plot-image">
+            <div id="AKAM_TEAM" class="plot-container">
+                <img src="./AKAM_TEAM_zscore.png" alt="AKAM/TEAM Z-score" class="plot-image">
+                <img src="./AKAM_TEAM_profit.png" alt="AKAM/TEAM Profit" class="plot-image">
             </div>
         
-            <div id="NVMI_APP" class="plot-container">
-                <img src="./NVMI_APP_zscore.png" alt="NVMI/APP Z-score" class="plot-image">
-                <img src="./NVMI_APP_profit.png" alt="NVMI/APP Profit" class="plot-image">
+            <div id="S_GTLB" class="plot-container">
+                <img src="./S_GTLB_zscore.png" alt="S/GTLB Z-score" class="plot-image">
+                <img src="./S_GTLB_profit.png" alt="S/GTLB Profit" class="plot-image">
             </div>
         
-            <div id="GOOGL_PDYN" class="plot-container">
-                <img src="./GOOGL_PDYN_zscore.png" alt="GOOGL/PDYN Z-score" class="plot-image">
-                <img src="./GOOGL_PDYN_profit.png" alt="GOOGL/PDYN Profit" class="plot-image">
+            <div id="AKAM_ZS" class="plot-container">
+                <img src="./AKAM_ZS_zscore.png" alt="AKAM/ZS Z-score" class="plot-image">
+                <img src="./AKAM_ZS_profit.png" alt="AKAM/ZS Profit" class="plot-image">
             </div>
         
-            <div id="LTRN_MSTR" class="plot-container">
-                <img src="./LTRN_MSTR_zscore.png" alt="LTRN/MSTR Z-score" class="plot-image">
-                <img src="./LTRN_MSTR_profit.png" alt="LTRN/MSTR Profit" class="plot-image">
+            <div id="AKAM_WDAY" class="plot-container">
+                <img src="./AKAM_WDAY_zscore.png" alt="AKAM/WDAY Z-score" class="plot-image">
+                <img src="./AKAM_WDAY_profit.png" alt="AKAM/WDAY Profit" class="plot-image">
             </div>
         
-            <div id="INTC_GOOGL" class="plot-container">
-                <img src="./INTC_GOOGL_zscore.png" alt="INTC/GOOGL Z-score" class="plot-image">
-                <img src="./INTC_GOOGL_profit.png" alt="INTC/GOOGL Profit" class="plot-image">
+            <div id="AKAM_BBAI" class="plot-container">
+                <img src="./AKAM_BBAI_zscore.png" alt="AKAM/BBAI Z-score" class="plot-image">
+                <img src="./AKAM_BBAI_profit.png" alt="AKAM/BBAI Profit" class="plot-image">
             </div>
         
-            <div id="MDB_PDYN" class="plot-container">
-                <img src="./MDB_PDYN_zscore.png" alt="MDB/PDYN Z-score" class="plot-image">
-                <img src="./MDB_PDYN_profit.png" alt="MDB/PDYN Profit" class="plot-image">
+            <div id="TEM_SOUN" class="plot-container">
+                <img src="./TEM_SOUN_zscore.png" alt="TEM/SOUN Z-score" class="plot-image">
+                <img src="./TEM_SOUN_profit.png" alt="TEM/SOUN Profit" class="plot-image">
             </div>
         
-            <div id="KLAC_APP" class="plot-container">
-                <img src="./KLAC_APP_zscore.png" alt="KLAC/APP Z-score" class="plot-image">
-                <img src="./KLAC_APP_profit.png" alt="KLAC/APP Profit" class="plot-image">
+            <div id="DELL_SYM" class="plot-container">
+                <img src="./DELL_SYM_zscore.png" alt="DELL/SYM Z-score" class="plot-image">
+                <img src="./DELL_SYM_profit.png" alt="DELL/SYM Profit" class="plot-image">
             </div>
         
-            <div id="LTRN_CDNS" class="plot-container">
-                <img src="./LTRN_CDNS_zscore.png" alt="LTRN/CDNS Z-score" class="plot-image">
-                <img src="./LTRN_CDNS_profit.png" alt="LTRN/CDNS Profit" class="plot-image">
+            <div id="MRVL_BBAI" class="plot-container">
+                <img src="./MRVL_BBAI_zscore.png" alt="MRVL/BBAI Z-score" class="plot-image">
+                <img src="./MRVL_BBAI_profit.png" alt="MRVL/BBAI Profit" class="plot-image">
+            </div>
+        
+            <div id="AKAM_AI" class="plot-container">
+                <img src="./AKAM_AI_zscore.png" alt="AKAM/AI Z-score" class="plot-image">
+                <img src="./AKAM_AI_profit.png" alt="AKAM/AI Profit" class="plot-image">
+            </div>
+        
+            <div id="AVGO_TEAM" class="plot-container">
+                <img src="./AVGO_TEAM_zscore.png" alt="AVGO/TEAM Z-score" class="plot-image">
+                <img src="./AVGO_TEAM_profit.png" alt="AVGO/TEAM Profit" class="plot-image">
+            </div>
+        
+            <div id="RXRX_AISP" class="plot-container">
+                <img src="./RXRX_AISP_zscore.png" alt="RXRX/AISP Z-score" class="plot-image">
+                <img src="./RXRX_AISP_profit.png" alt="RXRX/AISP Profit" class="plot-image">
+            </div>
+        
+            <div id="KLAC_STX" class="plot-container">
+                <img src="./KLAC_STX_zscore.png" alt="KLAC/STX Z-score" class="plot-image">
+                <img src="./KLAC_STX_profit.png" alt="KLAC/STX Profit" class="plot-image">
+            </div>
+        
+            <div id="AVGO_QCOM" class="plot-container">
+                <img src="./AVGO_QCOM_zscore.png" alt="AVGO/QCOM Z-score" class="plot-image">
+                <img src="./AVGO_QCOM_profit.png" alt="AVGO/QCOM Profit" class="plot-image">
+            </div>
+        
+            <div id="WRD_CRNC" class="plot-container">
+                <img src="./WRD_CRNC_zscore.png" alt="WRD/CRNC Z-score" class="plot-image">
+                <img src="./WRD_CRNC_profit.png" alt="WRD/CRNC Profit" class="plot-image">
+            </div>
+        
+            <div id="WRD_BBAI" class="plot-container">
+                <img src="./WRD_BBAI_zscore.png" alt="WRD/BBAI Z-score" class="plot-image">
+                <img src="./WRD_BBAI_profit.png" alt="WRD/BBAI Profit" class="plot-image">
+            </div>
+        
+            <div id="S_NOW" class="plot-container">
+                <img src="./S_NOW_zscore.png" alt="S/NOW Z-score" class="plot-image">
+                <img src="./S_NOW_profit.png" alt="S/NOW Profit" class="plot-image">
+            </div>
+        
+            <div id="S_MBLY" class="plot-container">
+                <img src="./S_MBLY_zscore.png" alt="S/MBLY Z-score" class="plot-image">
+                <img src="./S_MBLY_profit.png" alt="S/MBLY Profit" class="plot-image">
+            </div>
+        
+            <div id="S_MSTR" class="plot-container">
+                <img src="./S_MSTR_zscore.png" alt="S/MSTR Z-score" class="plot-image">
+                <img src="./S_MSTR_profit.png" alt="S/MSTR Profit" class="plot-image">
+            </div>
+        
+            <div id="WRD_LTRN" class="plot-container">
+                <img src="./WRD_LTRN_zscore.png" alt="WRD/LTRN Z-score" class="plot-image">
+                <img src="./WRD_LTRN_profit.png" alt="WRD/LTRN Profit" class="plot-image">
             </div>
         
             <div class="repo-link">
@@ -126,27 +191,28 @@
                 <p>The strategy filters candidate pairs using the following criteria:</p>
                 <ul>
                     <li><b>Statistical Integrity:</b> A Cointegration <i>p</i>-value &lt; 0.05 (95% confidence).</li>
-                    <li><b>Performance Requirements:</b> A minimum Sharpe Ratio of 1.0 and positive annualized returns across both training and testing periods.</li>
-                    <li><b>Reliability Metric:</b> A Sharpe Stability ratio (Testing Sharpe / Training Sharpe) of at least 0.5 to mitigate the risk of overfitting.</li>
+                    <li><b>Performance Requirements:</b> A minimum Sharpe Ratio of 1.0 and a minimum annualized returns of 0.4 across both training and testing periods.</li>
+                    <li><b>Reliability Metric:</b> A Sharpe and Annualized Returns Stability ratios (Testing / Training) of at least 0.5 to mitigate the risk of overfitting.</li>
                 </ul>
 
                 <h4>2. Execution Logic & Risk Management</h4>
-                <p>The strategy monitors the Z-score of the price spread, calculated over a 90-hour rolling window. This metric quantifies the number of standard deviations (σ) the current spread has drifted from its mean.</p>
+                <p>The strategy monitors the Z-score of the price spread, calculated over a 140-hour rolling window. This metric quantifies the number of standard deviations (σ) the current spread has drifted from its mean.</p>
                 <ul>
                     <li><b>Entry Signal:</b> A position is initiated when the spread deviates beyond 1.5σ.</li>
                     <li><b>Exit Signal:</b> Positions are closed as the spread reverts to 0.5σ.</li>
-                    <li><b>Protective Constraints:</b> A Stop-Loss is triggered at 3.5σ. Additionally, new entries are blocked if the Z-score exceeds 2.5σ to prevent trading during extreme, non-reverting market shocks.</li>
+                    <li><b>Protective Constraints:</b> A Stop-Loss is triggered at 3.5σ. Additionally, new entries are blocked if the Z-score exceeds 3.0σ to prevent trading during extreme, non-reverting market shocks.</li>
+                    <li><b>Hedge Ratio Limit:</b> Trades will not execute if the calculated hedge ratio exceeds 5.0 or is below 0.2, preventing positions in highly volatile or unstable relationships.</li>
                     <li><b>Transaction Costs:</b> All performance metrics incorporate a 0.5% fee per trade.</li>
                 </ul>
 
                 <h4>3. Walk-Forward Simulation & Adaptive Re-optimization</h4>
                 <p>Beginning January 1, 2026, the strategy operates as a live simulation using hourly data. To adapt to shifting correlations within the AI sector, the model employs a walk-forward approach with the following lookback structure:</p>
                 <ul>
-                    <li><b>Dual-Horizon Selection:</b> Each pair must pass a one-year cointegration test to ensure a robust long-term statistical relationship, combined with a 90-day optimization window to capture recent market regimes.</li>
-                    <li><b>Training & Testing:</b> The 90-day window is split into a 60-day training period for parameter tuning and a 30-day testing period for out-of-sample validation.</li>
-                    <li><b>Dynamic Hedging:</b> An 18-day lookback is utilized to calculate the current hedge ratio and spread for active trading.</li>
-                    <li><b>60-Day Re-optimization:</b> Every two months, the entire selection pipeline is re-run. The system prunes inactive pairs and rotates into new opportunities that meet both the long-term structural and short-term performance criteria. A pair is deactivated if it's no longer optimized and its last two months profit falls below a 3% threshold.</li>
-                    <li><b>Capital Allocation:</b> Total profit calculations assume an equal-weight investment across all active pairs at the commencement of each period.</li>
+                    <li><b>Dual-Horizon Selection:</b> Each pair must pass a 9 months cointegration test to ensure a robust long-term statistical relationship.</li>
+                    <li><b>Training & Testing:</b> The 150-day window is split into a 90-day training period and a 60-day testing period to capture recent market regimes.</li>
+                    <li><b>Dynamic Hedging:</b> An 90-day lookback is utilized to calculate the current hedge ratio and spread and a 140-hour rolling window is used to calculate the z score for active trading.</li>
+                    <li><b>60-Day Re-optimization:</b> Every 60 days, the entire selection pipeline is re-run. The system prunes inactive pairs and rotates into new opportunities that meet both the long-term structural and short-term performance criteria.
+                    <li><b>Capital Allocation:</b> Total profit calculations are based on an additive model where an equal, fixed sum of capital is allocated to each active pair.</li>
                 </ul>
             </div>
         </div>
