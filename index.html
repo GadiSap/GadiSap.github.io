@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Sector Pairs Trading Strategy - 2026-01-02 to 2026-05-06</title>
+        <title>AI Sector Pairs Trading Strategy - 2026-01-02 to 2026-05-07</title>
         <style>
             body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #0d1117; color: #c9d1d9; }
             .container { max-width: 1200px; margin: auto; background-color: #161b22; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
@@ -29,24 +29,19 @@
     </head>
     <body>
         <div class="container">
-            <h1>AI Sector Statistical Arbitrage for 2026-01-02 to 2026-04-15</h1>
+            <h1>AI Sector Statistical Arbitrage for 2026-01-02 to 2026-04-16</h1>
 
             <div class="button-container">
                 <button class="plot-button status-info" onclick="showPlot('total_portfolio')">Total Portfolio Profit</button>
     <button class="plot-button status-active" onclick="showPlot('MPWR_ANET')">MPWR/ANET</button>
-<button class="plot-button status-active" onclick="showPlot('AKAM_AUR')">AKAM/AUR</button>
-<button class="plot-button status-danger" onclick="showPlot('WDAY_HUBS')">(Inactive) WDAY/HUBS</button>
-<button class="plot-button status-active" onclick="showPlot('WDAY_DOCU')">WDAY/DOCU</button>
-<button class="plot-button" onclick="showPlot('AKAM_TEAM')">(Inactive) AKAM/TEAM</button>
-<button class="plot-button status-active" onclick="showPlot('S_GTLB')">(Inactive) S/GTLB</button>
-<button class="plot-button" onclick="showPlot('AKAM_ZS')">(Inactive) AKAM/ZS</button>
-<button class="plot-button" onclick="showPlot('AKAM_WDAY')">(Inactive) AKAM/WDAY</button>
-<button class="plot-button" onclick="showPlot('AKAM_BBAI')">(Inactive) AKAM/BBAI</button>
-<button class="plot-button status-active" onclick="showPlot('TEM_SOUN')">(Inactive) TEM/SOUN</button>
 <button class="plot-button status-danger" onclick="showPlot('DELL_SYM')">(Inactive) DELL/SYM</button>
+<button class="plot-button status-active" onclick="showPlot('TEM_SOUN')">(Inactive) TEM/SOUN</button>
+<button class="plot-button" onclick="showPlot('AKAM_WDAY')">(Inactive) AKAM/WDAY</button>
+<button class="plot-button status-active" onclick="showPlot('S_GTLB')">(Inactive) S/GTLB</button>
+<button class="plot-button" onclick="showPlot('AKAM_TEAM')">(Inactive) AKAM/TEAM</button>
+<button class="plot-button status-active" onclick="showPlot('WDAY_DOCU')">WDAY/DOCU</button>
+<button class="plot-button status-danger" onclick="showPlot('WDAY_HUBS')">(Inactive) WDAY/HUBS</button>
 <button class="plot-button status-active" onclick="showPlot('MRVL_BBAI')">(Inactive) MRVL/BBAI</button>
-<button class="plot-button" onclick="showPlot('AKAM_AI')">(Inactive) AKAM/AI</button>
-<button class="plot-button status-danger" onclick="showPlot('AVGO_TEAM')">AVGO/TEAM</button>
 <button class="plot-button status-active" onclick="showPlot('RXRX_AISP')">RXRX/AISP</button>
 <button class="plot-button status-danger" onclick="showPlot('KLAC_STX')">KLAC/STX</button>
 <button class="plot-button status-danger" onclick="showPlot('AVGO_QCOM')">AVGO/QCOM</button>
@@ -56,6 +51,7 @@
 <button class="plot-button status-active" onclick="showPlot('S_MBLY')">S/MBLY</button>
 <button class="plot-button" onclick="showPlot('S_MSTR')">S/MSTR</button>
 <button class="plot-button status-danger" onclick="showPlot('WRD_LTRN')">WRD/LTRN</button>
+<button class="plot-button status-danger" onclick="showPlot('AVGO_TEAM')">AVGO/TEAM</button>
 
             </div>
 
@@ -68,44 +64,9 @@
                 <img src="./MPWR_ANET_profit.png" alt="MPWR/ANET Profit" class="plot-image">
             </div>
         
-            <div id="AKAM_AUR" class="plot-container">
-                <img src="./AKAM_AUR_zscore.png" alt="AKAM/AUR Z-score" class="plot-image">
-                <img src="./AKAM_AUR_profit.png" alt="AKAM/AUR Profit" class="plot-image">
-            </div>
-        
-            <div id="WDAY_HUBS" class="plot-container">
-                <img src="./WDAY_HUBS_zscore.png" alt="WDAY/HUBS Z-score" class="plot-image">
-                <img src="./WDAY_HUBS_profit.png" alt="WDAY/HUBS Profit" class="plot-image">
-            </div>
-        
-            <div id="WDAY_DOCU" class="plot-container">
-                <img src="./WDAY_DOCU_zscore.png" alt="WDAY/DOCU Z-score" class="plot-image">
-                <img src="./WDAY_DOCU_profit.png" alt="WDAY/DOCU Profit" class="plot-image">
-            </div>
-        
-            <div id="AKAM_TEAM" class="plot-container">
-                <img src="./AKAM_TEAM_zscore.png" alt="AKAM/TEAM Z-score" class="plot-image">
-                <img src="./AKAM_TEAM_profit.png" alt="AKAM/TEAM Profit" class="plot-image">
-            </div>
-        
-            <div id="S_GTLB" class="plot-container">
-                <img src="./S_GTLB_zscore.png" alt="S/GTLB Z-score" class="plot-image">
-                <img src="./S_GTLB_profit.png" alt="S/GTLB Profit" class="plot-image">
-            </div>
-        
-            <div id="AKAM_ZS" class="plot-container">
-                <img src="./AKAM_ZS_zscore.png" alt="AKAM/ZS Z-score" class="plot-image">
-                <img src="./AKAM_ZS_profit.png" alt="AKAM/ZS Profit" class="plot-image">
-            </div>
-        
-            <div id="AKAM_WDAY" class="plot-container">
-                <img src="./AKAM_WDAY_zscore.png" alt="AKAM/WDAY Z-score" class="plot-image">
-                <img src="./AKAM_WDAY_profit.png" alt="AKAM/WDAY Profit" class="plot-image">
-            </div>
-        
-            <div id="AKAM_BBAI" class="plot-container">
-                <img src="./AKAM_BBAI_zscore.png" alt="AKAM/BBAI Z-score" class="plot-image">
-                <img src="./AKAM_BBAI_profit.png" alt="AKAM/BBAI Profit" class="plot-image">
+            <div id="DELL_SYM" class="plot-container">
+                <img src="./DELL_SYM_zscore.png" alt="DELL/SYM Z-score" class="plot-image">
+                <img src="./DELL_SYM_profit.png" alt="DELL/SYM Profit" class="plot-image">
             </div>
         
             <div id="TEM_SOUN" class="plot-container">
@@ -113,24 +74,34 @@
                 <img src="./TEM_SOUN_profit.png" alt="TEM/SOUN Profit" class="plot-image">
             </div>
         
-            <div id="DELL_SYM" class="plot-container">
-                <img src="./DELL_SYM_zscore.png" alt="DELL/SYM Z-score" class="plot-image">
-                <img src="./DELL_SYM_profit.png" alt="DELL/SYM Profit" class="plot-image">
+            <div id="AKAM_WDAY" class="plot-container">
+                <img src="./AKAM_WDAY_zscore.png" alt="AKAM/WDAY Z-score" class="plot-image">
+                <img src="./AKAM_WDAY_profit.png" alt="AKAM/WDAY Profit" class="plot-image">
+            </div>
+        
+            <div id="S_GTLB" class="plot-container">
+                <img src="./S_GTLB_zscore.png" alt="S/GTLB Z-score" class="plot-image">
+                <img src="./S_GTLB_profit.png" alt="S/GTLB Profit" class="plot-image">
+            </div>
+        
+            <div id="AKAM_TEAM" class="plot-container">
+                <img src="./AKAM_TEAM_zscore.png" alt="AKAM/TEAM Z-score" class="plot-image">
+                <img src="./AKAM_TEAM_profit.png" alt="AKAM/TEAM Profit" class="plot-image">
+            </div>
+        
+            <div id="WDAY_DOCU" class="plot-container">
+                <img src="./WDAY_DOCU_zscore.png" alt="WDAY/DOCU Z-score" class="plot-image">
+                <img src="./WDAY_DOCU_profit.png" alt="WDAY/DOCU Profit" class="plot-image">
+            </div>
+        
+            <div id="WDAY_HUBS" class="plot-container">
+                <img src="./WDAY_HUBS_zscore.png" alt="WDAY/HUBS Z-score" class="plot-image">
+                <img src="./WDAY_HUBS_profit.png" alt="WDAY/HUBS Profit" class="plot-image">
             </div>
         
             <div id="MRVL_BBAI" class="plot-container">
                 <img src="./MRVL_BBAI_zscore.png" alt="MRVL/BBAI Z-score" class="plot-image">
                 <img src="./MRVL_BBAI_profit.png" alt="MRVL/BBAI Profit" class="plot-image">
-            </div>
-        
-            <div id="AKAM_AI" class="plot-container">
-                <img src="./AKAM_AI_zscore.png" alt="AKAM/AI Z-score" class="plot-image">
-                <img src="./AKAM_AI_profit.png" alt="AKAM/AI Profit" class="plot-image">
-            </div>
-        
-            <div id="AVGO_TEAM" class="plot-container">
-                <img src="./AVGO_TEAM_zscore.png" alt="AVGO/TEAM Z-score" class="plot-image">
-                <img src="./AVGO_TEAM_profit.png" alt="AVGO/TEAM Profit" class="plot-image">
             </div>
         
             <div id="RXRX_AISP" class="plot-container">
@@ -176,6 +147,11 @@
             <div id="WRD_LTRN" class="plot-container">
                 <img src="./WRD_LTRN_zscore.png" alt="WRD/LTRN Z-score" class="plot-image">
                 <img src="./WRD_LTRN_profit.png" alt="WRD/LTRN Profit" class="plot-image">
+            </div>
+        
+            <div id="AVGO_TEAM" class="plot-container">
+                <img src="./AVGO_TEAM_zscore.png" alt="AVGO/TEAM Z-score" class="plot-image">
+                <img src="./AVGO_TEAM_profit.png" alt="AVGO/TEAM Profit" class="plot-image">
             </div>
         
             <div class="repo-link">
